@@ -72,12 +72,12 @@ class showCoordinates ( NSObject, GlyphsReporterProtocol ):
 		for thisPath in thisLayer.paths:
 			nodes = thisPath.nodes
 			for thisNode in nodes:
-				if thisNode.type == GSCURVE or GSLINE and thisNode.type != GSOFFCURVE:
+				if thisNode.type == "curve" or "line" and thisNode.type != "offcurve":
 					x = int(round(thisNode.position.x))
 					y = int(round(thisNode.position.y))
 
 					self.drawTextAtPoint( str(x)+ ", " + str(y), (x, y), 10.0, fontColor1 )
-				if thisNode.type == GSOFFCURVE and thisNode.nextNode.type !=GSOFFCURVE:
+				if thisNode.type == "offcurve" and thisNode.nextNode.type != "offcurve":
 					x1 = thisNode.position.x
 					x2 = thisNode.nextNode.position.x
 					deltaX = int(round(x1-x2))
@@ -85,7 +85,7 @@ class showCoordinates ( NSObject, GlyphsReporterProtocol ):
 					y2 = thisNode.nextNode.position.y
 					deltaY = int(round(y1-y2))
 					self.drawTextAtPoint( str(deltaX)+ ", " + str(deltaY), (x1, y1), 10.0, fontColor2 )
-				if thisNode.type == GSOFFCURVE and thisNode.prevNode.type !=GSOFFCURVE:
+				if thisNode.type == "offcurve" and thisNode.prevNode.type !="offcurve":
 					x1 = thisNode.position.x
 					x2 = thisNode.prevNode.position.x
 					deltaX = int(round(x1-x2))
