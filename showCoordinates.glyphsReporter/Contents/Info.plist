@@ -17,17 +17,17 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>UpdateFeedURL</key>
 	<string>https://raw.githubusercontent.com/guidoferreyra/showCoordinates/master/showCoordinates.glyphsReporter/Contents/Info.plist</string>
 	<key>productPageURL</key>
 	<string>https://github.com/guidoferreyra/showCoordinates</string>
 	<key>productReleaseNotes</key>
-	<string>Updated code base for Glyphs 2.5</string>
+	<string>Updated for Glyphs 2/3 compatibility</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright, Guido Ferreyra, 2018</string>
+	<string>Copyright, Guido Ferreyra, 2020</string>
 	<key>NSPrincipalClass</key>
 	<string>showCoordinates</string>
 	<key>PyMainFileNames</key>
