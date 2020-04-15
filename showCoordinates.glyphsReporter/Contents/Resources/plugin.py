@@ -32,6 +32,9 @@ class showCoordinates(ReporterPlugin):
 	
 	@objc.python_method
 	def foregroundInViewCoords(self, layer = None):
+		windowController = self.controller.windowController()
+		if windowController.toolDrawDelegate().className() == "GlyphsToolHand":
+			return
 		try:
 			layer = self.activeLayer()
 			self._pos = self.activePosition()
